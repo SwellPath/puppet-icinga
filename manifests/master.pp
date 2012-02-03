@@ -33,6 +33,7 @@ class icinga::master inherits icinga {
 		group   => root,
 		mode    => 0644,
 		source  => "puppet:///modules/icinga/common/etc/icinga/htpasswd.users",
+		replace => 'no',
 		require => Package["icinga"],
 	}
 
