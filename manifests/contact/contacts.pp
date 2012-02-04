@@ -11,6 +11,7 @@ define icinga::contact::contacts($alias = false, $email = false, $group = false)
 		contactgroups => $group,
 		use           => "generic-contact",
 		target        => "/etc/icinga/objects/contacts.cfg",
+		require       => File['/etc/icinga/objects']
 	}
 }
 
